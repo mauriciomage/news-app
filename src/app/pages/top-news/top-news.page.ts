@@ -14,6 +14,7 @@ export class TopNewsPage implements OnInit {
   ngOnInit() {
     this.newsService.getData('top-headlines?country=us').subscribe((data: any) => {
       this.news = data;
+      this.newsService.loading.dismiss();
     });
   }
 
