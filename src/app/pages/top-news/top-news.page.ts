@@ -23,10 +23,9 @@ export class TopNewsPage implements OnInit {
 
   private getData() {
     this.newsService.getData('top-headlines?country=us').subscribe((data: any) => {
-      this.news = data;
-      if (this.newsService.loading) {
-        this.newsService.loading.dismiss();
-      }
+      setTimeout(() => {
+        this.news = data;
+      }, 1500)
     });
   }
 

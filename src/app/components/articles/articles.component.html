@@ -1,4 +1,13 @@
 <ion-grid fixed>
+  <ion-row *ngIf="!news?.articles?.length">
+    <ion-col size=12 *ngFor="let article of fakeArticles">
+        <ion-skeleton-text [animated]="true" style="width: 35%"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" style="width: 75%"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" style="width: 100%"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" style="width: 85%"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" style="width: 60%"></ion-skeleton-text>
+    </ion-col>
+  </ion-row>
   <ion-row>
     <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12" *ngFor="let article of news?.articles; let i=index">
         <app-article [article]="article"></app-article>

@@ -21,15 +21,7 @@ export class NewsService {
     private loadingController: LoadingController
   ) { }
 
-  async showLoading() {
-    this.loading = await this.loadingController.create({
-      duration: 2000,
-    });
-    return await this.loading.present();
-  }
-
   public getData(url: string) {
-    this.showLoading();
     return this.http.get(`${apiUrl}/${url}`, {params});
   }
 }

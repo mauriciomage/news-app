@@ -24,10 +24,9 @@ export class HeadlinesPage implements OnInit {
 
   private getCategoryData(category: string): void {
     this.newsService.getData(`everything?q=${category.toLowerCase()}`).subscribe((data: any) => {
-      this.newsByCategory = data;
-      if (this.newsService.loading) {
-        this.newsService.loading.dismiss();
-      }
+      setTimeout(() => {
+        this.newsByCategory = data;
+      }, 1000)
     });
   }
 
