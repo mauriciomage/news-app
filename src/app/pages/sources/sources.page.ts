@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from 'src/app/services/news.service';
 
 @Component({
   selector: 'app-sources',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SourcesPage implements OnInit {
 
-  constructor() { }
+  sources: any;
+  fakeSources = new Array(10);
+
+  constructor(
+    private service: NewsService
+  ) { }
 
   ngOnInit() {
+    this.sources = this.service.getData('sources').subscribe((resp: {}) => {
+      this.sources = resp;
+    });
   }
 
 }
