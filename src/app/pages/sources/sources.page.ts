@@ -10,14 +10,15 @@ export class SourcesPage implements OnInit {
 
   sources: any;
   fakeSources = new Array(10);
+  term: string = '';
 
   constructor(
     private service: NewsService
   ) { }
 
   ngOnInit() {
-    this.sources = this.service.getData('sources').subscribe((resp: {}) => {
-      this.sources = resp;
+    this.sources = this.service.getData('sources').subscribe((resp: any) => {
+      this.sources = resp['sources'];
     });
   }
 
