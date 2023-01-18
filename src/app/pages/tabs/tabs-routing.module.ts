@@ -28,6 +28,10 @@ const routes: Routes = [
         loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule)
       },
       {
+        path: 'sources/:id',
+        loadChildren: () => import('../source/source.module').then(m => m.SourcePageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/top-news',
         pathMatch: 'full'
