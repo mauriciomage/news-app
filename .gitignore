@@ -31,9 +31,10 @@ log.txt
 
 # Node
 /node_modules
+/resources
 npm-debug.log
 yarn-error.log
-
+package-lock.json
 # IDEs and editors
 .idea/
 .project

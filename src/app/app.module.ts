@@ -10,13 +10,16 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { PipesModule } from './pipes/pipes.module';
 
+import { IonicStorageModule } from '@ionic/storage-angular';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule, IonicModule.forRoot(),
     AppRoutingModule, HttpClientModule,
     ComponentsModule,
-    PipesModule
+    PipesModule,
+    IonicStorageModule.forRoot()  
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

@@ -13,12 +13,10 @@ const params = new HttpParams().set('apiKey', apiKey);
 })
 
 export class NewsService {
-
   loading: any; 
 
   constructor(
     private http: HttpClient,
-    private loadingController: LoadingController
   ) { }
 
   public getData(url: string) {
