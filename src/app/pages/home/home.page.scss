@@ -1,0 +1,36 @@
+ion-card-header {
+  background-color: #f6b93b;
+}
+
+ion-card {
+  background-color: #e55039;
+  
+}
+
+.content {
+ &__card {
+   &__header {
+     &__title {
+        color: #060606;
+        font-size: 35px;
+        text-align: center;
+     }
+   }
+  &__content {
+    &__total {
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 30px;
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #060606;
+    color: #fff;
+    font-size: 14px;
+  }
+ } 
+}

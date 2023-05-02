@@ -16,7 +16,6 @@ export class StorageService {
     // If using, define drivers here: await this.storage.defineDriver(/*...*/);
     const storage = await this.storage.create();
     this._storage = storage;
-    console.log(this._storage);
   }
 
   // Create and expose methods that users of this service can

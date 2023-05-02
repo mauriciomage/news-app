@@ -7,16 +7,20 @@ const routes: Routes = [
     path: 'tabs',
     component: TabsPage,
     children: [
+      // {
+      //   path: 'top-news',
+      //   loadChildren: () => import('../top-news/top-news.module').then(m => m.TopNewsPageModule)
+      // },
       {
-        path: 'top-news',
-        loadChildren: () => import('../top-news/top-news.module').then(m => m.TopNewsPageModule)
+        path: 'home',
+        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
         path: 'headlines',
         loadChildren: () => import('../headlines/headlines.module').then(m => m.HeadlinesPageModule)
       },
       {
-        path: 'sources',
+        path: 'expenses',
         loadChildren: () => import('../sources/sources.module').then(m => m.SourcesPageModule)
       },
       {
@@ -24,7 +28,7 @@ const routes: Routes = [
         loadChildren: () => import('../favorites/favorites.module').then(m => m.FavoritesPageModule)
       },
       {
-        path: 'settings',
+        path: 'new',
         loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule)
       },
       {
@@ -33,14 +37,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/top-news',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/top-news',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];

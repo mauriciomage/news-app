@@ -14,10 +14,10 @@ export class SourcePage implements OnInit {
   constructor(private newsService: NewsService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.newsService.getData(`everything?sources=${this.id}`).subscribe((resp: any) => {
-      this.news = resp;
-    });
+    // this.id = this.activatedRoute.snapshot.paramMap.get('id');
+    // this.newsService.getData(`everything?sources=${this.id}`).subscribe((resp: any) => {
+    //   this.news = resp;
+    // });
   }
 
 }

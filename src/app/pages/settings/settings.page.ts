@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPage implements OnInit {
 
+  description: string = '';
+  amount: number = 0;
+  date: string = '';
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  public onSubmit(): void {}
 
 }

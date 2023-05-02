@@ -13,6 +13,7 @@ export class SourcesPage implements OnInit {
   sources: any;
   fakeSources = new Array(10);
   term: string = '';
+  bills = [{description: 'compra mercadona', amount: 25.5, date: '18/04/2023' }];
 
   constructor(
     private service: NewsService,
@@ -20,9 +21,10 @@ export class SourcesPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.sources = this.service.getData('sources').subscribe((resp: any) => {
-      this.sources = resp['sources'];
-    });
+    // this.sources = this.service.getData('sources').subscribe((resp: any) => {
+    //   this.sources = resp['sources'];
+    // });
+
   }
 
   public favorite(source: {}): void {
